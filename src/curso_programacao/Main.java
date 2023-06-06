@@ -7,61 +7,64 @@ public class Main {
 	public static void main(String[] args) {
 
 		int opcao;
-		boolean continuar = true;
+		
+		Media_dois_numeros mdn = new Media_dois_numeros();
+		Media_tres_numeros mtn = new Media_tres_numeros();
+		Conversao_medidas cm = new Conversao_medidas();
+		Scanner scn = new Scanner(System.in);
 
 		System.out.println("Bem-vindo ao programa de funções!");
 
-		while (continuar) {
 			System.out.println("Qual das funções a seguir você deseja usar?");
 			System.out.println("1 - Média entre dois números");
 			System.out.println("2 - Média entre três números");
 			System.out.println("3 - Conversão de medidas");
 			System.out.println("4 - Encerrar");
 			System.out.println(" ");
-			System.out.print("Sua opção: ");
-			System.out.println(" ");
-
-			Scanner scn = new Scanner(System.in);
-
-			if (scn.hasNextInt()) {
-				opcao = scn.nextInt();
+			System.out.println("Sua opção: ");
+			System.out.print("=> ");
+			opcao = lerNumeroValido(scn);
 
 				switch (opcao) {
 					case 1:
 						System.out.println(" ");
 						System.out.println("Iniciando . . .");
 						System.out.println(" ");
-						Media_dois_numeros mdn = new Media_dois_numeros();
-						mdn.calcularMedia();
-						continuar = false;
+						mdn.calcularMedia();				
 						break;
+						
 					case 2:
 						System.out.println(" ");
 						System.out.println("Iniciando . . .");
 						System.out.println(" ");
-						Media_tres_numeros mtn = new Media_tres_numeros();
-						mtn.calcularMedia();
-						continuar = false;
+						mtn.calcularMedia();			
 						break;
+						
 					case 3:
-						System.out.println("Indisponível");
-						continuar = false;
+						System.out.println(" ");
+						System.out.println("Iniciando . . .");
+						System.out.println(" ");
+						cm.Converter_medidas();
 						break;
+						
 					case 4:
 						System.out.println("Encerrando o programa...");
-						continuar = false;
 						break;
-					default:
-						System.out.println("Opção inválida.");
-						continuar = false;
-						break;
+						
 				}
-			} else {
-				System.out.println("Opção inválida. Tente novamente.");
-			}
 
-			continuar = false;
-			scn.close();
+		scn.close();
+	}
+	
+	private static int lerNumeroValido(Scanner scanner) {
+		while (true) {
+			int numero = scanner.nextInt();
+			if (numero > 0 && numero <= 4) {
+				return numero;
+			} else {
+				System.out.println("Digite um número válido!");
+				System.out.println(" ");
+			}
 		}
 	}
 

@@ -11,15 +11,18 @@ public class Media_dois_numeros {
 
 		Scanner scn = new Scanner(System.in);
 
-		System.out.println("Olá, mundo!");
 		System.out.println("Realizarei agora alguns testes de funcionalidades");
 		System.out.println("Me diga um número de 0 a 10:");
+		System.out.print("=> ");
 		x1 = lerNumeroValido(scn);
+		System.out.println(" ");
 		System.out.println("Agora me diga um segundo número de 0 a 10:");
+		System.out.print("=> ");
 		x2 = lerNumeroValido(scn);
+		System.out.println(" ");
 		System.out.println("Obrigado! A média entre os números citados é:");
 		media = (x1 + x2) / 2;
-		System.out.println(media);
+		System.out.println("=> " + media);
 		
 		scn.close();
 	}
@@ -31,7 +34,6 @@ public class Media_dois_numeros {
 				return numero;
 			} else {
 				System.out.println("Digite um número válido!");
-				System.out.println(" ");
 			}
 		}
 	}
