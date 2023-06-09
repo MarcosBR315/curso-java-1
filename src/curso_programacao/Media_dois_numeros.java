@@ -22,7 +22,7 @@ public class Media_dois_numeros {
 		System.out.println(" ");
 		System.out.println("Obrigado! A média entre os números citados é:");
 		media = (x1 + x2) / 2;
-		System.out.println("=> " + media);
+		System.out.printf("%.2f%n", media);
 		
 		scn.close();
 	}

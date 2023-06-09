@@ -35,7 +35,9 @@ public class Conversao_medidas {
 					kmUm = kmScn.nextDouble();
 					metrosUm = kmUm * 1000;
 					System.out.println(" ");
-					System.out.println("Resultado: " + metrosUm + " metros.");
+					System.out.print("Resultado:");
+					System.out.printf("%.2f",metrosUm);
+					System.out.println(" metros");
 					System.out.println(" ");
 					System.out.println("Pressione Enter para continuar . . .");
 					pause.nextLine();
@@ -52,7 +54,9 @@ public class Conversao_medidas {
 					metrosDois = metrosScn.nextDouble();
 					kmDois = metrosDois / 1000;
 					System.out.println(" ");
-					System.out.println("Resultado: " + kmDois + " km.");
+					System.out.print("Resultado:");
+					System.out.printf("%.2f",kmDois);
+					System.out.println(" km's.");
 					System.out.println(" ");
 					System.out.println("Pressione Enter para continuar . . .");
 					pause.nextLine();
@@ -69,8 +73,9 @@ public class Conversao_medidas {
 					litrosUm = litrosScn.nextDouble();
 					mlUm = litrosUm * 1000;
 					System.out.println(" ");
-					System.out.println("Resultado: " + mlUm + " ml.");
-					System.out.println(" ");
+					System.out.print("Resultado:");
+					System.out.printf("%.2f",mlUm);
+					System.out.println(" ml.");
 					System.out.println("Pressione Enter para continuar . . .");
 					pause.nextLine();
 					System.out.println(" ");
@@ -86,8 +91,9 @@ public class Conversao_medidas {
 					mlDois = mlScn.nextDouble();
 					litrosDois = mlDois / 1000;
 					System.out.println(" ");
-					System.out.println("Resultado: " + litrosDois + " ml.");
-					System.out.println(" ");
+					System.out.print("Resultado:");
+					System.out.printf("%.2f",litrosDois);
+					System.out.println(" litros.");
 					System.out.println("Pressione Enter para continuar . . .");
 					pause.nextLine();
 					System.out.println(" ");
@@ -95,6 +101,7 @@ public class Conversao_medidas {
 					
 				case 5:
 					System.out.println("Encerrando . . .");
+					System.out.println(" ");
 					repeatConversao = false;
 					break;
 					

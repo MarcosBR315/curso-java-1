@@ -23,7 +23,7 @@ public class Media_tres_numeros {
         System.out.println(" ");
         System.out.println("Obrigado! A média entre os números é:");
         media = (x1 + x2 + x3) / 3;
-        System.out.println("=> " + media);
+        System.out.printf("%.2f%n", media);
         System.out.println(" ");
         System.out.println("Pressione Enter para continuar . . .");
         scn.nextLine();
